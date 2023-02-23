@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import session from "express-session";
 import {AppDataSource} from "./src/data-source";
 import cors from 'cors';
+import employer from "./src/routes/employer";
 
 const app = express();
 AppDataSource.initialize().then(() => {
@@ -18,8 +19,8 @@ app.use(session({
     saveUninitialized: true,
     secret: 'somesecret',
     cookie: { maxAge: 100000 }}));
-// app.use('', router);
+app.use('', employer);
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log('Server is running')
 })

@@ -8,12 +8,12 @@ export class Employer{
    employerName : string;
     @Column()
     employerPassword : string;
-    @Column()
+    @Column({nullable:true})
     address : string;
-    @Column()
+    @Column({nullable:true})
     description :number;
-    @Column()
+    @Column({nullable:true})
     staffNumber: string;
-    @Column()
+    @Column({nullable:true})
     brand : string;
 }

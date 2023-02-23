@@ -1,12 +1,10 @@
 import "reflect-metadata"
-import {DataSource} from "typeorm";
+import { DataSource } from "typeorm";
+import {Post} from "./models/post";
+import {JobDetail} from "./models/jobDetail";
+import {User} from "./models/user";
 import {Employer} from "./models/employer";
 import {Job} from "./models/job";
-import {JobDetail} from "./models/jobDetail";
-import {Post} from "./models/post";
-import {User} from "./models/user";
-
-
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -16,5 +14,5 @@ export const AppDataSource = new DataSource({
     password: "123456",
     database: 'case-md5',
     synchronize: true,
-    entities: [Employer,Job,JobDetail,Post,User]
+    entities: [Post,JobDetail,User,Employer,Job]
 })

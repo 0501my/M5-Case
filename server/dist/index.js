@@ -20,7 +20,7 @@ app.use(express_1.default.static('./public'));
 app.use((0, express_session_1.default)({
     resave: true,
     saveUninitialized: true,
-    secret: 'some-secret',
+    secret: 'somesecret',
     cookie: { maxAge: 100000 }
 }));
 app.use('', router_1.router);

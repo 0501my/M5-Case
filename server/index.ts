@@ -1,5 +1,5 @@
 import express from 'express';
-// import {router} from "./src/routers/router";
+import {router} from "./src/routes/router";
 import bodyParser from "body-parser";
 import session from "express-session";
 import {AppDataSource} from "./src/data-source";
@@ -18,8 +18,8 @@ app.use(session({
     saveUninitialized: true,
     secret: 'somesecret',
     cookie: { maxAge: 100000 }}));
-// app.use('', router);
+app.use('', router);
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Server is running')
 })

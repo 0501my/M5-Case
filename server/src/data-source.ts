@@ -1,5 +1,10 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm";
+import {Employer} from "./models/employer";
+import {Job} from "./models/job";
+import {JobDetail} from "./models/jobDetail";
+import {Post} from "./models/post";
+import {User} from "./models/user";
 
 export const AppDataSource = new DataSource({
     type: "mysql",
@@ -9,5 +14,5 @@ export const AppDataSource = new DataSource({
     password: "123456",
     database: 'case-md5',
     synchronize: true,
-    entities: ["dist/src/models/*.js"]
+    entities: [Employer,Job,JobDetail,Post,User]
 })

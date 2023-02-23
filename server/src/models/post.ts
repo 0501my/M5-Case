@@ -1,29 +1,29 @@
 import {Column, Entity, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Post{
+export class Post {
     @PrimaryGeneratedColumn()
-    idPost : number;
+    idPost: number;
     @Column()
-    salary : number;
+    salary: number;
     @Column()
-    workLocation : string;
+    workLocation: string;
     @Column()
-    position : string;
+    position: string;
     @Column()
     experience: string;
     @Column()
-    workTime : string;
-    @Column({type : "datetime"})
-    endTime : string;
+    workTime: string;
+    @Column({type: "datetime"})
+    endTime: string;
     @Column()
-    description : string;
+    description: string;
     @Column()
-    recruitmentsNumber : number;
+    recruitmentsNumber: number;
     @Column()
-    status : string;
-@Column()
-    image : string;
-@Column()
-    title : string;
+    status: string;
+    @Column()
+    image: string;
+    @Column()
+    title: string;
 }

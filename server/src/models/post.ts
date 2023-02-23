@@ -24,4 +24,6 @@ export class Post{
     status : string;
 @Column()
     image : string;
+@Column()
+    title : string;
 }
